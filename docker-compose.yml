@@ -36,6 +36,8 @@ services:
       - "8888:8888"
     volumes:
       - ./code:/home/jovyan/work
+    environment:
+      - JUPYTER_TOKEN=
     networks:
       - spark-network
 
