@@ -28,4 +28,16 @@ services:
       - SPARK_MASTER_URL=spark://spark-master:7077
     networks:
       - spark-network
-  
+
+  jupyter:
+    image: jupyter/pyspark-notebook:latest # Change this to bitname/jupyter-base-notebook
+    container_name: jupyter
+    ports:
+      - "8888:8888"
+    volumes:
+      - ./code:/home/jovyan/work
+    networks:
+      - spark-network
+
+networks:
+  spark-network:
