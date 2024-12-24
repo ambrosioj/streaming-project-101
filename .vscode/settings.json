@@ -1,0 +1,7 @@
+{
+    "python.pythonPath": "/home/ambrosioj/.pyenv/versions/3.12.8/envs/streaming-project-101-env",
+    "python.analysis.extraPaths": ["./code"],
+    "docker.composeFile":["docker-compose.yml"],
+    "remote.containers.dockerComposeFile":"docker-compose.yml",
+    "remote.containers.service":"jupyter"
+}
