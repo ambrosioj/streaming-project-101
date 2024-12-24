@@ -29,14 +29,14 @@ services:
       - spark-network
 
   jupyter:
-    image: jupyter/pyspark-notebook:latest # Change this to bitname/jupyter-base-notebook
+    image: bitnami/jupyter-base-notebook:latest # Change this to bitname/jupyter-base-notebook
     container_name: jupyter
     ports:
       - "8888:8888"
-    volumes:
-      - ./code:/home/jovyan/work
+    # volumes:
+      # - ./code:/home/jovyan/work
     environment:
-      - JUPYTER_TOKEN= # Entender melhor como remover esse token
+      - JUPYTER_TOKEN="123456"
     networks:
       - spark-network
 
