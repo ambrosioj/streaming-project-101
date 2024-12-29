@@ -1,2 +1,3 @@
 FROM jupyter/pyspark-notebook:latest
-RUN pip install -r /home/jovyan/requirements.txt
+COPY code /home/jovyan/work
+RUN pip install -r /home/jovyan/work/requirements.txt
