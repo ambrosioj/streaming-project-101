@@ -29,15 +29,16 @@ services:
       - spark-network
 
   jupyter:
-    image: bitnami/jupyter-base-notebook:latest # Change this to bitname/jupyter-base-notebook
+    build: 
+      context: .
+      dockerfile: /spark/Dockerfile
     container_name: jupyter
     ports:
       - "8888:8888"
     volumes:
-      - ./code:/app
+      - ./code:/home/jovyan/work
     environment:
-      - JUPYTER_ENABLE-LAB=yes
-      - JUPYTER_PASSWORD=teste
+      - JUPYTER_ENABLE_LAB=yes
     networks:
       - spark-network
 
