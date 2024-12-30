@@ -7,7 +7,7 @@ services:
       - 7077:7077
     volumes:
       - ./conf/spark-defaults.conf:/opt/bitnami/spark/conf/spark-defaults.conf
-      - ./app:/app
+      - ./app:/home/jupyter/app
 
   spark-worker:
     image: bitnami/spark:3.5.1
@@ -21,7 +21,7 @@ services:
       SPARK_MASTER_URL: spark://spark-master:7077
     volumes:
       - ./conf/spark-defaults.conf:/opt/bitnami/spark/conf/spark-defaults.conf
-      - ./app:/app
+      - ./app:/home/jupyter/app
 
   jupyter-local:
     build: .
