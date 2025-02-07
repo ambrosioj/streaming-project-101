@@ -2,7 +2,7 @@
 
 ## Scope
 
-- [ ]  Install requirements.txt when the image is built
+- [x]  Install requirements.txt when the image is built
 - [ ]  Create a diagram with project main idea
 - [ ]  Create an API REST for data delivery
 - [ ]  Tools:
