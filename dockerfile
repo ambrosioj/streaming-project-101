@@ -13,8 +13,8 @@ COPY requirements.txt requirements.txt
 RUN pip install -r requirements.txt
 
 # Set working directory and permissions
-WORKDIR /app
-RUN chmod -R 777 /app
+WORKDIR $HOME/app
+RUN chmod -R 777 $HOME/app
 
 # Switch back to the non-root user
 USER 1001
